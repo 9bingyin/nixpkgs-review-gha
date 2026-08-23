@@ -182,6 +182,7 @@ jobs:
           PR_JSON: ${{ needs.prepare.outputs.pr }}
           IDENTIFY_STILL_FAILING_PACKAGES: ${{ vars.IDENTIFY_STILL_FAILING_PACKAGES }}
           IDENTIFY_UNSUPPORTED_PACKAGES: ${{ vars.IDENTIFY_UNSUPPORTED_PACKAGES }}
+          NIXPKGS_ALLOW_UNFREE: "1"
 
       - uses: actions/upload-artifact@v7
         with:
